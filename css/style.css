@@ -22,6 +22,15 @@ h2 {
     font-size: 3.5em;
 }
 
+* .masInfo a {
+    color: #b00655!important;
+    text-transform: uppercase;
+}
+
+* .masInfo a:hover {
+    text-decoration: underline wavy;
+}
+
 .h-50vh {
     height: 50vh;
 }
@@ -30,12 +39,44 @@ h2 {
     max-height: 90vh;
 }
 
-.carousel-caption {
-    background-color: rgba(52, 52, 52, 0.502);
-}
-
 .pos-rel-y {
     bottom: 3rem;
+}
+
+/* NAVBAR ---------------------- */
+.nav-item a,
+.dropdown a {
+    /* font-family: 'Lato', sans-serif!important; */
+    font-family: 'Bebas Neue', cursive!important;
+    letter-spacing: 1px;
+}
+
+/* INDEX --------------------- */
+/* CAROUSEL ------------------- */
+
+.carousel-caption {
+    background-color: #420044bf;
+    padding: 5px;
+    margin-bottom: 2em;
+}
+
+.carousel-caption h5 {
+    font-size: 2em;
+}
+
+.carousel-caption p {
+    font-size: larger;
+    margin-bottom: 0;
+}
+
+/* EXPLORA TYRIA --------------- */
+.wrapper_explora {
+    background-image: url(../img/Concept07.jpg);
+    background-position: center;
+    background-color: #450079;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
 .card_explora {
@@ -49,12 +90,17 @@ h2 {
     /* background-blend-mode: multiply; */
     background-size: cover;
     background-position: center;
+
+    transition: all .2s ease-in-out;
 }
 
 .card_explora p {
-    background-color: #5e00566f;
+    background-color: #5e00569c;
     position: relative;
     bottom: -16px;
+    opacity: 0;
+
+    transition: opacity .2s ease-in-out;
 }
 
 .wrapper-explora a {
@@ -96,14 +142,11 @@ h2 {
     color: #505050;
 }
 
-.novedades a {
-    color: #b00655;
-    text-transform: uppercase;
-}
 
 .novedades:hover {
     background-color: #49264621;
 }
+
 .novedadesNoticia {
     border-left: 1px dotted rgb(204, 202, 202);
     padding-left: 2em;
@@ -160,7 +203,7 @@ h2 {
     align-items: center;
     gap: 20px;
     width: 205px;
-    height: 255px;
+    height: 285px;
 
     text-align: center;
     margin-bottom: 30px;
@@ -284,28 +327,7 @@ footer {
     width: min-content;
 }
 
-@media screen and (min-width: 655px) {
-    .footerWrapper {
-        flex-flow: row nowrap;
-    }
 
-    .footerNav {
-        visibility: visible;
-        position: static;
-    }
-
-    .footerSocials {
-        border-bottom: none;
-    }
-
-    .footerAnetLogoWrap {
-        width: 100px;
-    }
-
-    .footerAnetLogoWrap img {
-        width: 100%;
-    }
-}
 
 /* PAGES ---------------------------*/
 
@@ -356,16 +378,6 @@ footer {
     max-width: 350px;
 }
 
-@media screen and (min-width: 1024px) {
-    .mainRazas .razas {
-        flex-flow: row nowrap;
-    }
-
-    .mainRazas .razas .col_2 {
-        align-items: flex-start;
-        text-align: left;
-    }
-}
 
 /* PAGES: CLASES ---------------------------*/
 .mainClases {
@@ -446,53 +458,6 @@ footer {
 }
 
 
-
-@media screen and (min-width: 1024px) {
-    .profWrapper {
-        grid-template-areas:
-        'hipnotizador guardian'
-        'nigromante guardabosques'
-        'elementalista guerrero'
-        'ladron ingeniero'
-        'retornado retornado'
-        ;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, auto);
-        max-width: 1200px;    
-    }
-
-    
-    .profWrapper .prof {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .profWrapper .prof .col_1 {
-        display: flex;
-        justify-content: end;
-    }
-
-    .profWrapper .prof .col_2 {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .profRetornado {
-        width:50%;
-        justify-self: center;
-    }
-
-    .prof {
-        border: none;
-    }
-}
-
 /* PAGES: NOTICIAS ---------------------------*/
 
 .wrapperNoticias {
@@ -550,4 +515,108 @@ footer {
 /* PAGES: MUNDO ---------------- */
 .mainMundo {
     margin: 8em 0 3em 0;
+}
+
+/* PAGES: JEFES ----------- */
+.mainJefes {
+    min-height: 80vh;
+    margin: 8em 0 3em 0;
+}
+
+/* PAGES: PERSONAJES ---------- */
+.mainPersonajes {
+    min-height: 80vh;
+    margin: 8em 0 3em 0;
+}
+
+
+/* MEDIA QUERIES ------------- */
+@media screen and (min-width: 655px) {
+    .footerWrapper {
+        flex-flow: row nowrap;
+    }
+
+    .footerNav {
+        visibility: visible;
+        position: static;
+    }
+
+    .footerSocials {
+        border-bottom: none;
+    }
+
+    .footerAnetLogoWrap {
+        width: 100px;
+    }
+
+    .footerAnetLogoWrap img {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) 
+{
+    .card_explora:hover {
+        border-color: #5e0056;
+    }
+
+    .card_explora:hover p {
+        opacity: 1;
+    }
+
+/* PROFESIONES -------------- */
+    .profWrapper {
+        grid-template-areas:
+        'hipnotizador guardian'
+        'nigromante guardabosques'
+        'elementalista guerrero'
+        'ladron ingeniero'
+        'retornado retornado'
+        ;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        max-width: 1200px;    
+    }
+
+    
+    .profWrapper .prof {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .profWrapper .prof .col_1 {
+        display: flex;
+        justify-content: end;
+    }
+
+    .profWrapper .prof .col_2 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .profRetornado {
+        width:50%;
+        justify-self: center;
+    }
+
+    .prof {
+        border: none;
+    }
+
+    /* RAZAS ------------ */
+    .mainRazas .razas {
+        flex-flow: row nowrap;
+    }
+
+    .mainRazas .razas .col_2 {
+        align-items: flex-start;
+        text-align: left;
+    }
 }
