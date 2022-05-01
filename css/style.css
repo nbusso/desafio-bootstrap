@@ -492,3 +492,62 @@ footer {
         border: none;
     }
 }
+
+/* PAGES: NOTICIAS ---------------------------*/
+
+.wrapperNoticias {
+    margin: 8em 0 3em 0;
+    padding: 3em 0;
+}
+
+.wrapperNoticias h1 {
+    font-size: 5em;
+}
+
+
+
+
+/* PAGES: LINKS UTILES ---------------------------*/
+.mainLinks {
+    margin: 8em 0 3em 0;
+}
+
+.mainLinks h1 {
+    font-size: 5em;
+}
+
+.wrapperCardLinks {
+    margin-top: 4vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardLinks {
+    border: 1px solid #c3c3c3;
+    padding: 2vh 2vw;
+    width: 100%;
+    max-width: 320px;
+}
+
+.cardLinks h4 {
+    color: #450079;
+}
+
+.cardLinks ul {
+    padding-left: 20px;
+}
+
+.cardLinks ul li {
+    line-height: 150%;
+}
+
+.cardLinks ul li a {
+    color:#4d0042;
+}
+
+/* PAGES: MUNDO ---------------- */
+.mainMundo {
+    margin: 8em 0 3em 0;
+}
